@@ -25,7 +25,7 @@ main(int argc, char **argv)
 		err_quit("inet_pton error for %s", argv[1]);
 	}
 
-	if (connect(sockfd, (SA *) &servaddr, sizeof(servaddr)) < 0) {
+	if (connect(sockfd, (struct sockaddr *) &servaddr, sizeof(servaddr)) < 0) {
 		err_sys("connect error");
 	}
 
@@ -36,7 +36,7 @@ main(int argc, char **argv)
 		}
 	}
 
-	if (0 > n) {
+	if (n < 0) {
 		err_sys("read error");
 	}
 
