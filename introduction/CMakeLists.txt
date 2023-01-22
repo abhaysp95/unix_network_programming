@@ -2,6 +2,7 @@ unset(s)
 
 list(APPEND s "daytimetcpcli")
 list(APPEND s "daytimetcpcliv6")
+list(APPEND s "daytimetcpserv")
 
 foreach(target IN LISTS s)
 	unset(file)

@@ -15,7 +15,9 @@ set(CMAKE_C_FLAGS_RELEASE "-03")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
 set(LIB_SOURCES
-  unp_lib/src/error.c)
+  unp_lib/src/error.c
+  unp_lib/src/wrapsock.c
+  unp_lib/src/wrapunix.c)
 set(LIB_HEADERES
 	unp_lib/inc/config.h
   unp_lib/inc/unp.h)
